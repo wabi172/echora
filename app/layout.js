@@ -1,16 +1,6 @@
-import localFont from 'next/font/local'
-import './globals.css'
-
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-})
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-})
+import React from 'react'
+// import './globals.css'
+import './style0.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,8 +10,90 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <div>
+        {/* fontawesome */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        {/* bootstrap */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+          integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        {/* fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet"
+        />
+      </div>
+
+      <body>
         {children}
+        <footer>
+          <div>
+            <ul className="nav justify-content-center d-flex row">
+              <li className="col-xxl-4 col-lg-12 col-md-12 col-sm-12">
+                NEWSLETTER
+                <div className="email">
+                  <div className="group">
+                    <input placeholder="請輸入email訂閱電子報" type="text" />
+                    <i className="fa-solid fa-arrow-right" />
+                  </div>
+                  <hr />
+                </div>
+                <p>
+                  點擊&quot;訂閱&quot;即表示妮卻您以閱讀和理解
+                  <a href="#">隱私權政策</a>
+                  ，並且同
+                  <br />
+                  意接收時事通訊及其他如政策中所述的行銷資訊。
+                </p>
+              </li>
+              <li className="col-xxl-1 col-lg-5 col-md-5 col-sm-5">
+                INFO
+                <div>常見問題</div>
+                <div>購物說明</div>
+                <div>物流配送</div>
+                <div>退貨流程</div>
+              </li>
+              <li className="col-xxl-1 col-lg-5 col-md-5 col-sm-5">
+                COMPANY
+                <div>關於我們</div>
+                <div>品牌合作</div>
+                <div>最新消息</div>
+                <div>服務條款</div>
+              </li>
+              <li className="col-xxl-2 col-lg-5 col-md-5 col-sm-5">
+                GET IN TOUCH
+                <div>service@echora.com</div>
+                <div>聯絡客戶服務</div>
+                <div>165反詐騙諮詢專線</div>
+              </li>
+              <li className="col-xxl-2 col-lg-5 col-md-5 col-sm-5">
+                ACCOUNT
+                <div>我的帳戶</div>
+                <div>訂單狀態</div>
+                <div>退貨與換貨</div>
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div className="mise">
+            <p className>Copyright © 2025 Echora Company</p>
+            <button className="btn btn-outline-dark ">
+              <i className="fa-solid fa-location-dot" /> 查找專門店
+            </button>
+          </div>
+        </footer>
       </body>
     </html>
   )
