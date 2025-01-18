@@ -10,6 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+   
+
       <div>
         {/* fontawesome */}
         <link
@@ -30,13 +32,73 @@ export default function RootLayout({ children }) {
         {/* fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
       </div>
 
       <body>
+      <nav className="g-header">
+  <div className="container-fluid">
+    <div className="g-nav-top row">
+      <div className="g-logo col-lg-4 col-6 order-1 ps-0">
+        <img className="g-pc-logo" src="./images/logo.svg" alt />
+        <img className="g-mb-logo" src="./images/logo-mb.svg" alt />
+      </div>
+      <form action className="col-lg-4 col-12 order-lg-2 order-3 d-flex align-items-center  p-0 mt-lg-0 mt-3">
+        <input type="search" className="form-control focus-ring g-search-field" placeholder="搜尋商品關鍵字" />
+      </form>
+      <div className="g-right-menu d-flex gap-4 col-lg-4 col-6 order-2 d-flex justify-content-end align-items-center p-0">
+        <a href><img src="./images/heart.svg" alt /></a>
+        <a href><img src="./images/account.svg" alt /></a>
+        <a href><img src="./images/cart.svg" alt /></a>
+        <a href className="hamburger"><img src="./images/hamburger.svg" alt /></a>
+      </div>
+    </div>
+    <div className="g-nav-bottom">
+      <ul className="d-flex justify-content-center gap-5 list-unstyled">
+        <li>
+          <a href>
+            <div className="d-flex">
+              <h6 className="h7">ELECTRIC GUITARS</h6>
+              <p className="px-1">/</p>
+              <p style={{fontWeight: 500}}>電吉他商品</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href>
+            <div className="d-flex">
+              <h6 className="h7">MUSIC FESTIVALS</h6>
+              <p className="px-1">/</p>
+              <p style={{fontWeight: 500}}>音樂活動</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href>
+            <div className="d-flex">
+              <h6 className="h7">RENTAL SERVICE</h6>
+              <p className="px-1">/</p>
+              <p style={{fontWeight: 500}}>商品租借</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href>
+            <div className="d-flex">
+              <h6 className="h7">SPECIAL EVENTS</h6>
+              <p className="px-1">/</p>
+              <p style={{fontWeight: 500}}>特別優惠</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {/* <form action="" class="col-5">
+          <input type="search" class="form-control focus-ring g-search-field" placeholder="搜尋商品關鍵字">
+      </form> */}
+  </div>
+</nav>
         {children}
         <footer>
           <div>
@@ -51,7 +113,7 @@ export default function RootLayout({ children }) {
                   <hr />
                 </div>
                 <p>
-                  點擊&quot;訂閱&quot;即表示妮卻您以閱讀和理解
+                  點擊&quot;訂閱&quot;即表示您確認您已閱讀和理解
                   <a href="#">隱私權政策</a>
                   ，並且同
                   <br />
